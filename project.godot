@@ -18,6 +18,11 @@ config/icon="res://icon.png"
 
 Game="*res://Scenes/Game.gd"
 
+[display]
+
+window/size/width=600
+window/size/height=800
+
 [input]
 
 ui_accept={
