@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Balek - 09:07:2022 17.34.wav-31e663d3cbd054cc13a9b16125f627cf.sample"
+
+[deps]
+
+source_file="res://Music/Balek - 09:07:2022 17.34.wav"
+dest_files=[ "res://.import/Balek - 09:07:2022 17.34.wav-31e663d3cbd054cc13a9b16125f627cf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

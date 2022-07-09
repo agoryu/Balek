@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/FondEcranWindows.png" type="Texture" id=4]
-[ext_resource path="res://Assets/score.001.png" type="Texture" id=5]
+[ext_resource path="res://Music/Balek - 09:07:2022 17.34.wav" type="AudioStream" id=5]
+[ext_resource path="res://Music/Balek - 09:07:2022 17.34 - 2.wav" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/Music.gd" type="Script" id=7]
+[ext_resource path="res://Assets/score.001.png" type="Texture" id=8]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,10 +25,21 @@ position = Vector2( 298, 512 )
 [node name="Score001" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 291, 68 )
 scale = Vector2( 0.308464, 0.231019 )
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 2 )]
 margin_left = -6.0
 margin_top = 16.0
 margin_right = -6.0
 margin_bottom = 16.0
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="AudioStreamPlayer_Intro" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 5 )
+
+[node name="AudioStreamPlayer_Main" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 6 )
+
+[connection signal="finished" from="Music/AudioStreamPlayer_Intro" to="Music" method="_on_AudioStreamPlayer_Intro_finished"]
