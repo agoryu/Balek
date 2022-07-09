@@ -15,7 +15,7 @@ func handleClick():
 	if Input.is_action_just_released("ui_accept"):
 		score+=1
 		emit_signal("inputReceived")
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
